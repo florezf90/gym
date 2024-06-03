@@ -31,3 +31,26 @@ body {
     text-wrap: balance;
   }
 }
+
+
+
+.backgroundIMG {
+  
+  background-size: cover;
+  background-position: center;
+  background-image: url("../../public/gymgirl.webp");
+  background-attachment: fixed;
+  height: 80vh;
+  background-repeat: no-repeat;
+  left: 0%;
+  
+}
+
+@media screen and (max-width: 768px) {
+  .backgroundIMG {
+    height: 70vh;
+    background-position-x: 50%;
+    background-position-y: 10vh;
+  }
+  
+}
