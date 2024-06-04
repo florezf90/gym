@@ -28,39 +28,51 @@ export default function Header() {
 
 
     return (
-      <header className="bg-white shadow ">
-        <div className=" flex  flex-wrap justify-between mx-auto  bg-red-500  px-4 py-6 sm:px-6 lg:px-8 divisor">
-          <div className="text-3xl font-bold tracking-tight text-gray-900  p-4">
+      <header className=" shadow  max-w-7xl mx-auto ">
+        <div className=" flex  flex-wrap justify-between mx-auto    px-4 pt-7 pb-1 sm:px-6 lg:px-8 divisor">
+          <div className="text-3xl font-bold tracking-tight text-white  p-4">
             florezf90 GYM
           </div>
-          <div className="text-xl font-bold tracking-tight mt-2 text-gray-900  p-4">
+          <div className="text-xl font-bold tracking-tight mt-2 text-white  p-4">
             1-800-555-1234
           </div>
-          <div className="text-xl font-bold tracking-tight mt-2 text-gray-900  p-4">
+          <div className="text-xl font-bold tracking-tight mt-2 text-white  p-4">
             Mon - Fri: 8:00AM - 7:00PM | Sat - Sun: Closed
           </div>
         </div>
         <div className="text-xl flex justify-between font-bold tracking-tight mt-2  ">
           <div className="hide">
-            <Link href="/" className="m-5 text-2xl">
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">
+            <Link href="/" className="m-5 text-xl">
+              <button
+                className="hover:text-gray-400 text-white font-bold py-2 px-4 rounded my-3"
+                aria-label="Home"
+              >
                 Home
               </button>
             </Link>
-            <Link href="/about" className="m-5 text-2xl">
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">
+            <Link href="/about" className="m-5 text-xl">
+              <button
+                className="hover:text-gray-400 text-white font-bold py-2 px-4 rounded my-3"
+                aria-label="About"
+              >
                 About
               </button>
             </Link>
           </div>
           <div className="hide">
-            <Link href="/services" className="m-5 text-2xl">
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">
+            <Link href="/services" className="m-5 text-xl">
+              <button
+                className="hover:text-gray-400 text-white font-bold py-2 px-4 rounded my-3"
+                aria-label="Services"
+              >
                 Services
               </button>
             </Link>
-            <Link href="/contact" className="m-5 text-2xl">
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">
+            <Link href="/contact" className="m-5 text-xl">
+              <button
+                className="hover:text-gray-400 text-white font-bold py-2 px-4 rounded my-3"
+                aria-label="Contact"
+              >
                 Get In Touch
               </button>
             </Link>
@@ -69,14 +81,15 @@ export default function Header() {
         {isSmallScreen && (
           <button
             onClick={toggleMenu}
-            className=" ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3"
+            className=" ml-4  text-white font-bold py-2 px-4 rounded my-3"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              style={{ color: "white"}}
+              style={{ color: "white" }}
+              aria-label="Menu"
             >
               <path
                 strokeLinecap="round"
@@ -90,24 +103,36 @@ export default function Header() {
 
         {isMenuOpen && isSmallScreen && (
           <div className="bg-gray-400 sidebarBg" onClick={toggleMenu}>
-            <div className="bg-gray-200 p-4 sidebar" onClick={toggleMenu}>
+            <div className="bg-black p-4 sidebar" onClick={toggleMenu}>
               <Link href="/" className="m-5 text-2xl">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">
+                <button
+                  className=" text-white font-bold py-2 px-4 rounded my-3"
+                  aria-label="Home"
+                >
                   Home
                 </button>
               </Link>
               <Link href="/about" className="m-5 text-2xl" onClick={toggleMenu}>
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">
+                <button
+                  className=" text-white font-bold py-2 px-4 rounded my-3"
+                  aria-label="About"
+                >
                   About
                 </button>
               </Link>
               <Link href="/services" className="m-5 text-2xl">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">
+                <button
+                  className=" text-white font-bold py-2 px-4 rounded my-3"
+                  aria-label="Services"
+                >
                   Services
                 </button>
               </Link>
               <Link href="/contact" className="m-5 text-2xl">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">
+                <button
+                  className=" text-white font-bold py-2 px-4 rounded my-3"
+                  aria-label="Contact"
+                >
                   Get In Touch
                 </button>
               </Link>
